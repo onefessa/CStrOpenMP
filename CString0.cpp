@@ -13,7 +13,7 @@ const CString0 CString0::operator + (const CString &s){
     CString *tmp = new CString0;
     tmp->f_name  = f_name;
 
-//        #pragma omp parallel for //shared (s, tmp)
+    #pragma omp parallel for //shared (s, tmp)
     tmp->str = str + s.str;
     tmp->len = len + s.len;
 
